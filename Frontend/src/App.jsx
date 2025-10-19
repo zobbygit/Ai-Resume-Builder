@@ -119,7 +119,7 @@ function handleLogout() {
 
   async function buildResume() {
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-resume', { resumePrompt });
+      const response = await axios.post('https://ai-resume-builder-backend-0vpw.onrender.com/ai/get-resume', { resumePrompt });
       setGeneratedResume(response.data);
     } catch (err) {
       setGeneratedResume("❌ Error: Could not generate resume. Check server.");
